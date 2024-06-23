@@ -30,25 +30,6 @@
 
     <header>
 
-        <!-- 
-        <div class="label"><span class="label__title" style="opacity: 0;">Wathsapp</span>
-            
-                <button class="taxi2airport__submitButton">
-                    <span>Wathsapp</span>
-                    <i class="fa-brands fa-whatsapp"></i>
-                </button>
-           
-        </div>
-
-        <div class="label"><span class="label__title" style="opacity: 0;">Wathsapp</span>
-            
-                <button class="taxi2airport__submitButton">
-                    <span>SMS</span>
-                    <i class="fa-regular fa-comment"></i>
-                </button>
-           
-            
-        </div> -->
 
 
 
@@ -59,25 +40,18 @@
     <main id="main-content" class="site-content">
         <div class="hero">
             <div class="hero__image">
-                <!-- <picture>
-                    <source
-                        srcset="https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-1024x768.jpg.webp 1024w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-300x225.jpg.webp 300w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-768x576.jpg.webp 768w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080.jpg.webp 1440w"
-                        sizes="(max-width: 1024px) 100vw, 1024px" type="image/webp"><img width="1024" height="768"
-                        src="https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-1024x768.jpg"
-                        class="attachment-large size-large webpexpress-processed" alt="" decoding="async"
-                        fetchpriority="high"
-                        srcset="https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-1024x768.jpg 1024w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-300x225.jpg 300w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-768x576.jpg 768w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080.jpg 1440w"
-                        sizes="(max-width: 1024px) 100vw, 1024px">
-                </picture> -->
                 <img src="https://plus.unsplash.com/premium_photo-1679758630312-a3d601c411d8?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="">
                 <h1 class="hero__title">Service de Chauffeur VTC<br> et Taxi à Besançon<br>Réservez maintenant !</h1>
+
+
+
             </div>
 
             <div class="hero__content">
                 <div id="taxi2airport_app">
 
-                    <!-- taxi2airpo -->
+
                     <div class="taxi2airport">
                         <form id="contact-form" onsubmit="SendEmail(); return false;"
                             class="reservationForm taxi2airport__form">
@@ -429,10 +403,9 @@
             </div>
         </div>
 
-
-
+    
         <!-- Gare populaire   -->
-        <div class="entry__content">
+        <div id="Gare" class="entry__content">
             <div class="vo-block-vo-heading text-center">
                 <div class="vo-block-vo-heading__inner">
                     <h2 class="vo-block-vo-heading__title">Gare populaire à Besançon.</h2>
@@ -478,7 +451,7 @@
 
 
             <!-- Aéroport à proximité   -->
-            <div class="vo-block-vo-heading text-center">
+            <div id="Aéroports" class="vo-block-vo-heading text-center">
                 <div class="vo-block-vo-heading__inner">
                     <h2 class="vo-block-vo-heading__title">Aéroport à proximité de Besançon.</h2>
                     <p class="vo-block-vo-heading__above-text">Quelle sera votre prochaine Aéroport de départ ou
@@ -528,7 +501,7 @@
 
                 <div class="cell airport-item">
                     <a href="#" class="airport-item__anchor">
-                        <span class="sr-only">éroport de Genève (GVA)</span>
+                        <span class="sr-only">Aéroport de Genève (GVA)</span>
                     </a>
                     <div class="airport-item__image">
                         <img src="images/Aéroport/Aéroport de Genève.png" alt="Aéroport de Genève ">
@@ -562,15 +535,26 @@
                             alt="logo chauffeur vtc besancon" class="site-footer__logo"> -->
                         <h6 class="site-footer__title">CHAUFFEUR-VTC-BESANCON.FR</h6>
                         <ul id="footer-menu-1" class="footer-menu">
-                            <li><a target="_blank" rel="noopener"
+                            <li><a id="serviceClientLink" target="_blank" rel="noopener"
                                     href="mailto:contact@chauffeur-vtc-besancon.fr">Service client</a></li>
-                            <li><a target="_blank" rel="noopener" href="#">A propos de nous</a></li>
-                            <li><a target="_blank" href="#">Blog</a></li>
-                            <li><a target="_blank" href="#">Aéroports</a></li>
+                            <script>
+                                document.getElementById('serviceClientLink').onclick = function (event) {
+                                    event.preventDefault(); // Empêche le comportement par défaut du lien
+                                    alert('Merci de contacter notre service client\ncontact@chauffeur-vtc-besancon.fr'); // Affiche un message avec un saut de ligne
+                                    window.location.href = 'mailto:contact@chauffeur-vtc-besancon.fr'; // Ouvre le client de messagerie
+                                };
+                            </script>
+
+
+                            <!-- <li><a target="_blank" rel="noopener" href="#">A propos de nous</a></li>
+                            <li><a target="_blank" href="#">Blog</a></li> -->
+                            <li><a href="#Aéroports">Aéroports</a></li>
                         </ul>
                     </div>
 
-                    <div class="cell large-3 medium-6 small-12">
+
+
+                    <!-- <div class="cell large-3 medium-6 small-12">
                         <h6 class="site-footer__title">Travailler avec nous</h6>
                         <ul id="footer-menu-1" class="footer-menu">
                             <li><a target="_blank" rel="noopener" href="#">Emplois</a></li>
@@ -578,22 +562,22 @@
                             <li><a target="_blank" href="#">Se connecter en tant que
                                     partenaire</a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
-                    <div class="cell large-3 medium-6 small-12">
+                    <!-- <div class="cell large-3 medium-6 small-12">
                         <h6 class="site-footer__title">Légal</h6>
                         <ul id="footer-menu-1" class="footer-menu">
                             <li><a target="_blank" rel="noopener" href="#">Conditions générales</a></li>
                             <li><a target="_blank" rel="noopener" href="#">Politique de confidentialité</a></li>
                             <li><a target="_blank" href="#">Divulgation responsable</a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <div class="cell large-3 medium-6 small-12">
                         <h6 class="site-footer__title">Gares populaires</h6>
                         <ul id="footer-menu-1" class="footer-menu">
-                            <li><a rel="noopener" href="#">Gare Besançon Franche-Comté TGV</a></li>
-                            <li><a rel="noopener" href="#">Gare de Besançon-Viottes</a></li>
+                            <li><a rel="noopener" href="#Gare">Gare Besançon Franche-Comté TGV</a></li>
+                            <li><a rel="noopener" href="#Gare">Gare de Besançon-Viottes</a></li>
                         </ul>
                     </div>
 
@@ -638,10 +622,10 @@
             'Date : ' + document.getElementById('date').value + '<br>' +
             'Heure : ' + document.getElementById('heure').value + '<br>' +
             'email : ' + document.getElementById('txtEmail').value + '<br>' +
-            'Numéro de téléphone : ' + document.getElementById('phoneNumber').value + '<br>' +
+            'Numéro de téléphone : ' + document.getElementById('phoneNumber').value + '<br><br>' +
 
             'passager : ' + document.getElementById('Nbpassage').value + '<br>' +
-            'bagage : ' + document.getElementById('Nbbagage').value + '<br>' +
+            'bagage : ' + document.getElementById('Nbbagage').value + '<br><br>' +
 
 
             'Adresse de départ sur Google Maps : <a href="https://www.google.com/maps?q=' + remplacerEspacesParPlus(document.getElementById('departureAddress').value) + '">Voir</a><br>' +
@@ -669,81 +653,43 @@
     }
 
 
-
     function remplacerEspacesParPlus(chaine) {
-            return chaine.replace(/ /g, '+');
-        }
-
+        return chaine.replace(/ /g, '+');
+    }
 
 </script>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- envoi formulaire sur email -->
-<!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- remplisate input depart -->
 <script>
-    (function () {
-        emailjs.init("ECa2z8ldVb2FBaizk"); // Utilisation de la Public Key
-    })();
+    document.addEventListener('DOMContentLoaded', function () {
+        var links = document.querySelectorAll('.airport-item__anchor');
+        links.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                var srOnlySpan = this.querySelector('.sr-only');
+                if (srOnlySpan) {
+                    var gareName = srOnlySpan.textContent;
+                    var inputField = document.getElementById('departureAddress');
+                    if (inputField) {
+                        inputField.value = gareName;
+                        // Faire défiler la page vers le haut
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        // window.scrollTo(0, 0);
 
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
+                    } else {
+                        console.error('error 1.');
+                    }
+                } else {
+                    console.error('error 2.');
+                }
 
-
-        //    var email = document.getElementById('txtEmail').value;
-        var message1 = 'Départ : ' + document.getElementById('departureAddress').value + '\n' +
-            'D\'Arrivée : ' + document.getElementById('arrivalAddress').value + '\n' +
-            'Date : ' + document.getElementById('date').value + '\n' +
-            'Heure : ' + document.getElementById('heure').value + '\n' +
-            'email : ' + document.getElementById('txtEmail').value + '\n' +
-            'Numéro de téléphone : ' + document.getElementById('phoneNumber').value + '\n' +
-
-            'passager : ' + document.getElementById('Nbpassage').value + '\n' +
-            'bagage : ' + document.getElementById('Nbbagage').value;
-
-
-        var lien = document.getElementById('departureAddress').value;
-
-
-
-
-        function remplacerEspacesParPlus(chaine) {
-            return chaine.replace(/ /g, '+');
-        }
-
-
-        emailjs.send("service_lrdsf4b", "template_97kouvy", {
-            message: message1,
-            adress1: 'https://www.google.com/maps?q=' + remplacerEspacesParPlus(document.getElementById('departureAddress').value),
-            adress2: 'https://www.google.com/maps?q=' + remplacerEspacesParPlus(document.getElementById('arrivalAddress').value),
-
-            adress3: 'https://www.google.com/maps/dir/' + remplacerEspacesParPlus(document.getElementById('departureAddress').value) + '/' + remplacerEspacesParPlus(document.getElementById('arrivalAddress').value)
-
-        }).then(function (response) {
-            console.log('E-mail envoyé avec succès!', response.status, response.text);
-            alert('Votre message a été envoyé avec succès!');
-            document.getElementById('contact-form').reset(); // Réinitialiser le formulaire après l'envoi
-        }, function (error) {
-            console.log('Echec de l\'envoi de l\'e-mail :', error);
-            alert('Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer plus tard.');
+            });
         });
     });
-</script> -->
+</script>
+
 
 
 <!-- adress auto -->
