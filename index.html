@@ -20,8 +20,8 @@
 
 
 
-      
-       <script src="https://kit.fontawesome.com/d7a21fe5b8.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/d7a21fe5b8.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -30,7 +30,7 @@
 
     <header>
 
-<!-- 
+        <!-- 
         <div class="label"><span class="label__title" style="opacity: 0;">Wathsapp</span>
             
                 <button class="taxi2airport__submitButton">
@@ -49,11 +49,11 @@
            
             
         </div> -->
-       
 
-        
 
-        
+
+
+
     </header>
 
     <main id="main-content" class="site-content">
@@ -69,7 +69,8 @@
                         srcset="https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-1024x768.jpg 1024w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-300x225.jpg 300w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080-768x576.jpg 768w, https://www.taxi2airport.com/wp-content/uploads/2022/11/Background_1440x1080.jpg 1440w"
                         sizes="(max-width: 1024px) 100vw, 1024px">
                 </picture> -->
-                <img src="https://plus.unsplash.com/premium_photo-1679758630312-a3d601c411d8?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <img src="https://plus.unsplash.com/premium_photo-1679758630312-a3d601c411d8?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
                 <h1 class="hero__title">Service de Chauffeur VTC<br> et Taxi à Besançon<br>Réservez maintenant !</h1>
             </div>
 
@@ -78,7 +79,8 @@
 
                     <!-- taxi2airpo -->
                     <div class="taxi2airport">
-                        <form id="contact-form" class="reservationForm taxi2airport__form">
+                        <form id="contact-form" onsubmit="SendEmail(); return false;"
+                            class="reservationForm taxi2airport__form">
                             <div class="taxi2airport__locations">
                                 <div for="input_from" class="label"><span class="label__title">De</span>
                                     <div class="form__inputContainer">
@@ -122,7 +124,7 @@
                                                 <label class="label">
 
                                                     <input class="" type="date" id="date" name="naissance"
-                                                        value="15-07-1999" required>
+                                                        value="2024-01-01" required>
 
                                                 </label>
 
@@ -184,7 +186,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
 
 
                         </form>
@@ -213,7 +215,7 @@
             </div>
         </div>
 
-        <article id="post-11347" class="entry post-11347 page type-page status-publish hentry">
+        <article class="page">
 
             <div class="entry__content">
 
@@ -228,9 +230,9 @@
 
 
 
-                <div class=" alignwide is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex">
+                <div class="alignwide layout-flex">
 
-                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+                    <div class="">
                         <div class="vo-block-icon-text vo-block-icon-text--vertical">
                             <div class="vo-block-icon-text__inner">
                                 <div class="vo-block-icon-text__icon">
@@ -247,7 +249,7 @@
 
 
 
-                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+                    <div class="">
                         <div class="vo-block-icon-text vo-block-icon-text--vertical">
                             <div class="vo-block-icon-text__inner">
                                 <div class="vo-block-icon-text__icon">
@@ -264,7 +266,7 @@
 
 
 
-                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+                    <div class="">
                         <div class="vo-block-icon-text vo-block-icon-text--vertical">
                             <div class="vo-block-icon-text__inner">
                                 <div class="vo-block-icon-text__icon">
@@ -279,7 +281,7 @@
                         </div>
                     </div>
 
-                    <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+                    <div class="">
                         <div class="vo-block-icon-text vo-block-icon-text--vertical">
                             <div class="vo-block-icon-text__inner">
                                 <div class="vo-block-icon-text__icon">
@@ -573,7 +575,7 @@
                         <ul id="footer-menu-1" class="footer-menu">
                             <li><a target="_blank" rel="noopener" href="#">Emplois</a></li>
                             <li><a target="_blank" rel="noopener" href="#">Devenez un chauffeur Taxi2Airport</a></li>
-                            <li><a target="_blank" href="https://www.taxi2airport.com/fr">Se connecter en tant que
+                            <li><a target="_blank" href="#">Se connecter en tant que
                                     partenaire</a></li>
                         </ul>
                     </div>
@@ -625,6 +627,63 @@
 
 
 
+<!-- envoie de mail formulaire devis -->
+<script src="https://smtpjs.com/v3/smtp.js"> </script>
+<script>
+
+    function SendEmail() {
+
+        var message1 = 'Départ : ' + document.getElementById('departureAddress').value + '<br>' +
+            'D\'Arrivée : ' + document.getElementById('arrivalAddress').value + '<br>' +
+            'Date : ' + document.getElementById('date').value + '<br>' +
+            'Heure : ' + document.getElementById('heure').value + '<br>' +
+            'email : ' + document.getElementById('txtEmail').value + '<br>' +
+            'Numéro de téléphone : ' + document.getElementById('phoneNumber').value + '<br>' +
+
+            'passager : ' + document.getElementById('Nbpassage').value + '<br>' +
+            'bagage : ' + document.getElementById('Nbbagage').value + '<br>' +
+
+
+            'Adresse de départ sur Google Maps : <a href="https://www.google.com/maps?q=' + remplacerEspacesParPlus(document.getElementById('departureAddress').value) + '">Voir</a><br>' +
+            'Adresse d\'arrivée sur Google Maps : <a href="https://www.google.com/maps?q=' + remplacerEspacesParPlus(document.getElementById('arrivalAddress').value) + '">Voir</a><br>' +
+            'Itinéraire sur Google Maps : <a href="https://www.google.com/maps/dir/' + remplacerEspacesParPlus(document.getElementById('departureAddress').value) + '/' + remplacerEspacesParPlus(document.getElementById('arrivalAddress').value) + '">Voir</a>';
+
+
+
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "no-reply@chauffeur-vtc-besancon.fr",
+            Password: "153EE9EDD17BE8E058B6D9C0817BA370D406",
+            To: 'amine.zoukel.31@gmail.com',
+            From: "no-reply@chauffeur-vtc-besancon.fr",
+            Subject: "COURSE PRIVÉ",
+            Body: message1
+        }).then(function (response) {
+            console.log('E-mail envoyé avec succès!', response.status, response.text);
+            alert('Votre message a été envoyé avec succès!');
+            document.getElementById('contact-form').reset(); // Réinitialiser le formulaire après l'envoi
+        }, function (error) {
+            console.log('Echec de l\'envoi de l\'e-mail :', error);
+            alert('Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer plus tard.');
+        });
+    }
+
+
+
+    function remplacerEspacesParPlus(chaine) {
+            return chaine.replace(/ /g, '+');
+        }
+
+
+</script>
+
+
+
+
+
+
+
+
 
 
 
@@ -636,13 +695,13 @@
 
 
 <!-- envoi formulaire sur email -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     (function () {
         emailjs.init("ECa2z8ldVb2FBaizk"); // Utilisation de la Public Key
     })();
 
-    document.getElementById('contact-form2').addEventListener('submit2', function (event) {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
 
 
@@ -656,8 +715,6 @@
 
             'passager : ' + document.getElementById('Nbpassage').value + '\n' +
             'bagage : ' + document.getElementById('Nbbagage').value;
-
-
 
 
         var lien = document.getElementById('departureAddress').value;
@@ -686,7 +743,7 @@
             alert('Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer plus tard.');
         });
     });
-</script>
+</script> -->
 
 
 <!-- adress auto -->

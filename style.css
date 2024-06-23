@@ -855,7 +855,12 @@ button {
 .entry__content>.alignwide {
     max-width: 62.5rem
 }
+/* ajouter */
+.alignwide div {
+    margin-top: 10px;
+    margin-bottom: 20px;
 
+}
 .entry__content>.alignfull {
     max-width: calc(100% + 1.875rem);
     margin-left: -.9375rem;
@@ -1815,7 +1820,7 @@ screen and (min-width:64em) {
     bottom: 0
 }
 
-.is-layout-flex {
+.layout-flex {
     display: flex;
     flex-direction: column;
 }
