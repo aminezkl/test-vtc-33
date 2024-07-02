@@ -241,44 +241,7 @@ button {
     font: inherit
 }
 
-@media print {
 
-    *,
-    :after,
-    :before {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")"
-    }
-
-    img {
-        page-break-inside: avoid
-    }
-
-    img {
-        max-width: 100% !important
-    }
-
-    h2,
-    p {
-        orphans: 3;
-        widows: 3
-    }
-
-    h2 {
-        page-break-after: avoid
-    }
-}
 
 .screen-reader-text {
     position: absolute !important;
@@ -291,29 +254,10 @@ button {
     border: 0 !important
 }
 
-/* @font-face {
-    font-family: IBM Plex Sans;
-    src: url(https://www.taxi2airport.com/fr/assets/fonts/IBMPlexSans/subset-IBMPlexSans.woff2) format("woff2"), url(https://www.taxi2airport.com/fr/assets/fonts/IBMPlexSans/subset-IBMPlexSans.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap
-}
 
-@font-face {
-    font-family: IBM Plex Sans;
-    src: url(https://www.taxi2airport.com/fr/assets/fonts/IBMPlexSans/subset-IBMPlexSans-Italic.woff2) format("woff2"), url(https://www.taxi2airport.com/fr/assets/fonts/IBMPlexSans/subset-IBMPlexSans-Italic.woff) format("woff");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap
+.site-footer {
+    overflow: hidden
 }
-
-@font-face {
-    font-family: IBM Plex Sans;
-    src: url(https://www.taxi2airport.com/fr/assets/fonts/IBMPlexSans/subset-IBMPlexSans-Bold.woff2) format("woff2"), url(https://www.taxi2airport.com/fr/assets/fonts/IBMPlexSans/subset-IBMPlexSans-Bold.woff) format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap
-} */
 
 ::selection {
     background: #51536d;
@@ -342,37 +286,6 @@ a {
 
 
 
-@media print,
-screen and (min-width:40em) {
-
-    h1 {
-        font-size: 3.25rem;
-        line-height: 1.19231;
-        letter-spacing: -1.5px
-    }
-}
-
-@media print,
-screen and (min-width:64em) {
-
-    h1 {
-        font-size: 3.625rem;
-        line-height: 1.17241;
-        letter-spacing: -1.5px
-    }
-}
-
-
-
-@media print,
-screen and (min-width:40em) {
-
-    h2 {
-        font-size: 2.75rem;
-        line-height: 1;
-        letter-spacing: -1px
-    }
-}
 
 
 
@@ -416,21 +329,6 @@ ul li {
     flex-basis: auto
 }
 
-@media print,
-screen and (min-width:40em) {
-
-    .grid-x>.medium-6 {
-        flex-basis: auto
-    }
-}
-
-@media print,
-screen and (min-width:64em) {
-
-    .grid-x>.large-3 {
-        flex-basis: auto
-    }
-}
 
 .grid-x>.small-12 {
     flex: 0 0 auto
@@ -440,29 +338,7 @@ screen and (min-width:64em) {
     width: 100%
 }
 
-@media print,
-screen and (min-width:40em) {
 
-    .grid-x>.medium-6 {
-        flex: 0 0 auto
-    }
-
-    .grid-x>.medium-6 {
-        width: 50%
-    }
-}
-
-@media print,
-screen and (min-width:64em) {
-
-    .grid-x>.large-3 {
-        flex: 0 0 auto
-    }
-
-    .grid-x>.large-3 {
-        width: 25%
-    }
-}
 
 .grid-margin-y:not(.grid-y)>.cell {
     height: auto
@@ -479,21 +355,6 @@ screen and (min-width:64em) {
     margin-right: .9375rem
 }
 
-@media print,
-screen and (min-width:40em) {
-
-    .medium-up-3>.cell {
-        width: 33.33333%
-    }
-}
-
-@media print,
-screen and (min-width:40em) {
-
-    .grid-margin-x.medium-up-3>.cell {
-        width: calc(33.33333% - 1.875rem)
-    }
-}
 
 .grid-margin-y {
     margin-top: -.9375rem;
@@ -510,85 +371,7 @@ screen and (min-width:40em) {
     height: calc(100% - 1.875rem)
 }
 
-@media print,
-screen and (min-width:40em) {
 
-    .grid-margin-y>.medium-6 {
-        height: calc(50% - 1.875rem)
-    }
-}
-
-@media print,
-screen and (min-width:64em) {
-
-    .grid-margin-y>.large-3 {
-        height: calc(25% - 1.875rem)
-    }
-
-}
-
-
-/* supprimer */
-/* @media print,
-screen and (max-width:39.99875em) {
-    .hide-for-small-only {
-        display: none !important
-    }
-} */
-/* supprimer */
-@media screen and (max-width:0em),
-screen and (min-width:40em) {
-    /* .show-for-small-only {
-        display: none !important
-    } */
-}
-
-.site-footer {
-    overflow: hidden
-}
-
-@media print,
-screen and (min-width:40em) {
-    .home .site-footer {
-        margin-top: -7.5rem
-    }
-}
-
-@media screen and (min-width:100em) {
-    .home .site-footer {
-        margin-top: -10rem
-    }
-}
-
-.site-footer__inner {
-    background: var(--header-color);
-    padding: 1.5rem
-}
-
-@media print,
-screen and (max-width:39.99875em) {
-    .site-footer__inner {
-        text-align: center
-    }
-}
-
-.site-footer__title {
-    color: #fff;
-    margin-bottom: .5rem;
-    margin-top: .25rem
-}
-
-.site-footer__logo {
-    margin-bottom: .5rem
-}
-
-@media print,
-screen and (min-width:40em) {
-    .site-footer__inner {
-        background: var(--header-color);
-        padding: 3rem
-    }
-}
 
 .footer-menu li {
     padding: .5rem 0
@@ -604,7 +387,7 @@ screen and (min-width:40em) {
     color: var(--white)
 }
 
-.site-footer__transfers {
+.section_grey {
     background-color: var(--footer-color);
     background-image: linear-gradient(0deg, var(--header-color), var(--footer-color));
     color: #fff;
@@ -616,17 +399,12 @@ screen and (min-width:40em) {
     margin: 0
 }
 
-.site-footer__transfers-content {
+.section_grey .section_grey_contenu {
     max-width: 57.5rem;
     margin: 0 auto
 }
 
-@media print,
-screen and (max-width:39.99875em) {
-    .site-footer__transfers-content {
-        padding: 0 1rem
-    }
-}
+
 
 .hero {
     background: var(--header-color);
@@ -707,35 +485,8 @@ screen and (max-width:39.99875em) {
     height: 1.125rem
 }
 
-@media print,
-screen and (min-width:40em) {
-    .hero__title {
-        padding-top: 2rem;
-        padding-bottom: 2rem
-    }
 
-    /* .hero__usp {
-        justify-content: flex-end
-    } */
 
-    .hero__usp li {
-        padding: 1rem .5rem 1rem 1rem;
-        font-size: 1rem
-    }
-
-    .hero__usp li .icon {
-        width: 1.375rem;
-        height: 1.375rem
-    }
-}
-
-@media print,
-screen and (min-width:64em) {
-    .hero__title {
-        padding-top: 5rem;
-        padding-bottom: 5rem
-    }
-}
 
 .entry__content {
     color: #51536d;
@@ -743,6 +494,10 @@ screen and (min-width:64em) {
     /* ajouter */
     margin-bottom: 160px;
 
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    margin-left: auto;
+    margin-right: auto
 }
 
 
@@ -838,29 +593,24 @@ button {
     display: block
 }
 
-.entry__content {
-    padding-left: .9375rem;
-    padding-right: .9375rem;
-    margin-left: auto;
-    margin-right: auto
-}
 
 .entry__content>* {
     /* modifie a ete 50rem*/
     max-width: 70rem;
     margin-left: auto;
-    margin-right: auto
-}
+    margin-right: auto;
 
-.entry__content>.alignwide {
     max-width: 62.5rem
 }
+
+
 /* ajouter */
 .alignwide div {
     margin-top: 10px;
     margin-bottom: 20px;
 
 }
+
 .entry__content>.alignfull {
     max-width: calc(100% + 1.875rem);
     margin-left: -.9375rem;
@@ -883,7 +633,6 @@ button {
 .home .entry__content>*+:last-child {
     margin-bottom: 0
 }
-
 
 
 .text-center {
@@ -912,55 +661,34 @@ button {
     flex-direction: column
 }
 
-@media print,
-screen and (min-width:40em) {
-    .vo-block-testimonials__inner {
-        flex-direction: row;
-        align-items: center;
-        max-width: 75rem;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 1rem
-    }
-}
 
-.vo-block-vo-heading {
+
+.section_titre {
     margin-top: 40px;
-    margin-bottom: 4rem !important
+    margin-bottom: 4rem !important;
+
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem
 }
 
-@media print,
-screen and (min-width:40em) {
-    .vo-block-vo-heading {
-        margin-bottom: 3rem
-    }
-}
 
 .vo-block-vo-heading+* {
     margin-top: 0 !important
 }
 
-.vo-block-vo-heading__inner {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    margin-bottom: 1rem
-}
 
-@media print,
-screen and (min-width:40em) {
-    .vo-block-vo-heading__inner {
-        margin-top: 2rem;
-        margin-bottom: 2rem
-    }
-}
 
-.vo-block-vo-heading__title {
+
+
+.section_titre h2 {
     order: 2;
     margin-bottom: 0 !important
 }
 
-.vo-block-vo-heading__above-text {
+.section_titre p {
     order: 1;
     font-weight: 700;
     margin-bottom: .5rem !important;
@@ -969,19 +697,10 @@ screen and (min-width:40em) {
     font-size: 1rem
 }
 
-@media print,
-screen and (min-width:40em) {
-    .vo-block-vo-heading__above-text {
-        margin-bottom: .5rem !important
-    }
-}
 
-.vo-block-icon-text__inner {
-    display: flex;
-    flex-direction: row
-}
 
-.vo-block-icon-text--vertical .vo-block-icon-text__inner {
+
+.entry__content article div {
     flex-direction: column;
     text-align: center;
     max-width: 19.375rem;
@@ -989,25 +708,17 @@ screen and (min-width:40em) {
     margin-right: auto
 }
 
-.vo-block-icon-text__icon {
+.entry__content .div_icon {
     font-size: 3.875rem;
     margin: 0 0 1rem
 }
 
-.vo-block-icon-text__icon svg {
-    min-width: 2.875rem
+
+
+.entry__content article h4 {
+    margin: 0 0 1rem;
 }
 
-.vo-block-icon-text__title {
-    margin: 0 0 1rem
-}
-
-@media print,
-screen and (min-width:40em) {
-    .vo-block-icon-text--vertical .vo-block-icon-text__description {
-        font-size: 1.25rem
-    }
-}
 
 
 
@@ -1061,42 +772,6 @@ button {
     font: inherit
 }
 
-@media print {
-
-    *,
-    :after,
-    :before {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important
-    }
-}
-
-/* @font-face {
-    font-family: IBM Plex Sans;
-    src: url(https://www.taxi2airport.com/fr/transferts-aeroport/barcelona-aeroport-taxi/assets/fonts/IBMPlexSans/subset-IBMPlexSans.woff2) format("woff2"), url(https://www.taxi2airport.com/fr/transferts-aeroport/barcelona-aeroport-taxi/assets/fonts/IBMPlexSans/subset-IBMPlexSans.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap
-}
-
-@font-face {
-    font-family: IBM Plex Sans;
-    src: url(https://www.taxi2airport.com/fr/transferts-aeroport/barcelona-aeroport-taxi/assets/fonts/IBMPlexSans/subset-IBMPlexSans-Italic.woff2) format("woff2"), url(https://www.taxi2airport.com/fr/transferts-aeroport/barcelona-aeroport-taxi/assets/fonts/IBMPlexSans/subset-IBMPlexSans-Italic.woff) format("woff");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap
-}
-
-@font-face {
-    font-family: IBM Plex Sans;
-    src: url(https://www.taxi2airport.com/fr/transferts-aeroport/barcelona-aeroport-taxi/assets/fonts/IBMPlexSans/subset-IBMPlexSans-Bold.woff2) format("woff2"), url(https://www.taxi2airport.com/fr/transferts-aeroport/barcelona-aeroport-taxi/assets/fonts/IBMPlexSans/subset-IBMPlexSans-Bold.woff) format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap
-} */
-
 
 
 
@@ -1109,17 +784,18 @@ form {
 
 
 
-.taxi2airport {
+.div_from {
     display: flex;
     flex-direction: column;
     align-content: center;
     /* suprimer */
     margin: 25px 0;
 
-    font-family: Montserrat, sans-serif
+    font-family: Montserrat, sans-serif;
+
 }
 
-.taxi2airport .taxi2airport__form {
+.div_from .form_reservation {
     --text-lg: 16px;
     --text-md: 15px;
     --text-sm: 14px;
@@ -1134,24 +810,24 @@ form {
     margin-bottom: 80px;
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__dateTime {
+.div_from .form_reservation .div_date_heure {
     display: flex;
     flex-direction: column
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__dateTime .label {
+.div_from .form_reservation .div_date_heure .label {
     flex-grow: 0;
     width: 100%
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__dateTime .taxi2airport__dateTime__divider {
+.div_from .form_reservation .div_date_heure .taxi2airport__dateTime__divider {
     width: 1px;
     height: calc(var(--input-box-size) - 15px);
     background-color: var(--gray-100);
     flex-shrink: 0
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__dateTime .taxi2airport__dateTime__wrapper {
+.div_from .form_reservation .div_date_heure .sous_div {
     display: flex;
     align-items: center;
     flex-grow: 0;
@@ -1164,25 +840,25 @@ form {
     height: var(--input-box-size)
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__dateTime .taxi2airport__dateTime__wrapper label {
+.div_from .form_reservation .div_date_heure .sous_div label {
     flex-grow: 0
 }
 
-.taxi2airport .taxi2airport__form .form__inputContainer {
+.div_from .form_reservation .form__inputContainer {
     position: relative;
     display: flex
 }
 
-.taxi2airport .taxi2airport__form button {
+.div_from .form_reservation button {
     font-weight: 700
 }
 
-.taxi2airport .taxi2airport__form button,
-.taxi2airport .taxi2airport__form input {
+.div_from .form_reservation button,
+.div_from .form_reservation input {
     font-size: var(--text-lg)
 }
 
-.taxi2airport .taxi2airport__form input {
+.div_from .form_reservation input {
     border-radius: var(--input-border-radius);
     border: none;
     box-sizing: border-box;
@@ -1190,15 +866,15 @@ form {
     outline: none
 }
 
-.taxi2airport .taxi2airport__form input:focus {
+.div_from .form_reservation input:focus {
     border: none
 }
 
-.taxi2airport .taxi2airport__form input:disabled {
+.div_from .form_reservation input:disabled {
     background-color: #fff
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__locations {
+.div_from .form_reservation .div_lieu {
     display: flex;
     gap: var(--form-group-spacing);
     flex-wrap: wrap;
@@ -1206,22 +882,22 @@ form {
 }
 
 /* ajouter */
-.taxi2airport .taxi2airport__form .taxi2airport__contact {
+.div_from .form_reservation .div_contact {
     display: flex;
     gap: var(--form-group-spacing);
     flex-wrap: wrap
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__locations .label {
+.div_from .form_reservation .div_lieu .label {
     width: 100%
 }
 
 /* ajouter */
-.taxi2airport .taxi2airport__form .taxi2airport__contact {
+.div_from .form_reservation .div_contact {
     width: 100%
 }
 
-.taxi2airport .taxi2airport__form .form__inputContainer input {
+.div_from .form_reservation .form__inputContainer input {
     border-radius: var(--input-border-radius);
     display: flex;
     padding: 1rem 2.875rem .625rem;
@@ -1240,30 +916,30 @@ form {
 }
 
 /* ajouter pour contact */
-.taxi2airport .taxi2airport__form .taxi2airport__locations .taxi2airport__locations__input[type="text"] {
+.div_from .form_reservation .div_lieu .input_adresse[type="text"] {
 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%237E8A96" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" /></svg>');
 
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__contact .taxi2airport__contact__input[type="email"] {
+.div_from .form_reservation .div_contact .input_contact[type="email"] {
 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%237e8a96" d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>');
 
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__contact .taxi2airport__contact__input[type="tel"] {
+.div_from .form_reservation .div_contact .input_contact[type="tel"] {
 
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%237e8a96" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>');
 
 }
 
-.taxi2airport .taxi2airport__form .inputLogo {
+.div_from .form_reservation .input_logo {
     padding-left: 46px;
     padding-right: 46px
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__settings {
+.div_from .form_reservation .div_option {
     display: flex;
     justify-content: center;
 
@@ -1271,7 +947,7 @@ form {
     flex-wrap: wrap
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__mutatorButton {
+.div_from .form_reservation .input_style {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -1282,18 +958,18 @@ form {
     font-weight: 500
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__mutatorButton--passenger {
+.div_from .form_reservation .input_style_passenger {
     padding-left: 17px;
     padding-right: 17px
 }
 
 
-.taxi2airport .taxi2airport__form .taxi2airport__mutatorButton--luggage {
+.div_from .form_reservation .input_style_bagage {
     padding-left: 17px;
     padding-right: 17px
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__submitButton {
+.div_from .form_reservation .bouton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1307,54 +983,54 @@ form {
     color: #fff
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__submitButton:hover {
+.div_from .form_reservation .bouton:hover {
     background-color: #66c264
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__submitButton span {
+.div_from .form_reservation .bouton span {
     margin-right: 11.3px
 }
 
-.taxi2airport .taxi2airport__form .label {
+.div_from .form_reservation .label {
     position: relative;
     display: flex;
     flex-direction: column;
     flex-grow: 1
 }
 
-.taxi2airport .taxi2airport__form .label .label__title {
+.div_from .form_reservation .label .label__title {
     font-size: var(--text-lg);
     margin-bottom: var(--label-text-margin-bottom);
     color: var(--gray-200)
 }
 
-.taxi2airport .taxi2airport__form .taxi2airport__locations .label,
-.taxi2airport .taxi2airport__form .taxi2airport__contact .label {
+.div_from .form_reservation .div_lieu .label,
+.div_from .form_reservation .div_contact .label {
     flex-grow: 1
 }
 
-.taxi2airport .taxi2airport__form input:focus {
+.div_from .form_reservation input:focus {
     outline: none
 }
 
-.taxi2airport .taxi2airport__form .form__inputGroup {
+.div_from .form_reservation .div_groupe {
     display: flex;
     gap: var(--form-group-spacing);
     flex-wrap: wrap;
     flex-grow: 1
 }
 
-.form__inputGroup input {
+.div_groupe input {
 
     width: auto;
 }
 
-.form__inputGroup input[type="number"] {
+.div_groupe input[type="number"] {
     max-width: 160px;
 
 }
 
-.taxi2airport__switcher__button {
+.bouton_permutation {
     height: 48px;
     width: 48px;
     aspect-ratio: 1/1;
@@ -1368,61 +1044,7 @@ form {
     transition: rotate .3s ease-in-out
 }
 
-@media only screen and (min-width:922px) {
-    .taxi2airport__switcher__button {
-        margin: 1.8rem 0 0
-    }
 
-    .taxi2airport .label {
-        flex-grow: 1
-    }
-
-    .taxi2airport .taxi2airport__settings {
-        flex-wrap: nowrap
-    }
-
-    .taxi2airport .taxi2airport__form {
-        padding: 30px 32px 60px
-    }
-
-    /* ajouter */
-    .taxi2airport .taxi2airport__form .taxi2airport__locations,
-    .taxi2airport .taxi2airport__form .taxi2airport__contact {
-        flex-wrap: nowrap
-    }
-
-    .taxi2airport .taxi2airport__form .taxi2airport__locations .label,
-    .taxi2airport .taxi2airport__form .taxi2airport__contact .label {
-        width: 45%
-    }
-
-    .taxi2airport .taxi2airport__form .taxi2airport__locations .taxi2airport__locations__input,
-    .taxi2airport .taxi2airport__form .taxi2airport__contact .taxi2airport__contact__input {
-        white-space: nowrap
-    }
-
-    .taxi2airport .taxi2airport__form .taxi2airport__dateTime .taxi2airport__dateTime__wrapper {
-        width: 270px
-    }
-
-    .taxi2airport .taxi2airport__form .form__inputGroup {
-        flex-wrap: nowrap;
-        flex-grow: 0
-    }
-
-    .taxi2airport .taxi2airport__form .taxi2airport__submitButton {
-        margin-top: 0;
-        width: auto;
-        flex-shrink: 0;
-        padding-left: 45px;
-        padding-right: 45px
-    }
-
-    .taxi2airport .taxi2airport__locations,
-    .taxi2airport .taxi2airport__contact {
-        flex-wrap: nowrap
-    }
-}
 
 
 /* email et tel ajouter */
@@ -1461,7 +1083,7 @@ input[type=text]:-ms-input-placeholder {
 
 
 /* barre de recherche */
-.taxi2airport__select {
+.div_select {
     position: absolute;
     margin-top: 50px;
     left: 0px;
@@ -1474,11 +1096,11 @@ input[type=text]:-ms-input-placeholder {
 
 }
 
-.taxi2airport__select__wrapper {
+.div_select_wrapper {
     overflow-y: scroll;
 }
 
-.taxi2airport__select__wrapper div {
+.div_select_wrapper div {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -1494,13 +1116,7 @@ input[type=text]:-ms-input-placeholder {
     width: 100%
 }
 
-.grid-margin-x:not(.grid-x)>.cell {
-    width: auto
-}
 
-.grid-margin-y:not(.grid-y)>.cell {
-    height: auto
-}
 
 .grid-margin-x>.cell {
     width: calc(100% - 1.875rem);
@@ -1513,138 +1129,127 @@ input[type=text]:-ms-input-placeholder {
     padding-left: .9375rem
 }
 
-.small-up-1>.cell {
-    width: 100%
+
+
+/* media */
+@media print {
+
+    *,
+    :after,
+    :before {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
 }
 
-.small-up-2>.cell {
-    width: 50%
-}
-
-.small-up-3>.cell {
-    width: 33.33333%
-}
-
-.small-up-4>.cell {
-    width: 25%
-}
-
-.small-up-5>.cell {
-    width: 20%
-}
-
-.small-up-6>.cell {
-    width: 16.66667%
-}
-
-.small-up-7>.cell {
-    width: 14.28571%
-}
-
-.small-up-8>.cell {
-    width: 12.5%
+@media print,
+screen and (max-width:39.99875em) {
+    .section_grey .section_grey_contenu {
+        padding: 0 1rem
+    }
 }
 
 @media print,
 screen and (min-width:40em) {
-    .medium-up-1>.cell {
-        width: 100%
+    .vo-block-testimonials__inner {
+        flex-direction: row;
+        align-items: center;
+        max-width: 75rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 1rem
     }
 
-    .medium-up-2>.cell {
-        width: 50%
+    .section_titre {
+        margin-top: 2rem;
+        margin-bottom: 5rem
     }
 
-    .medium-up-3>.cell {
-        width: 33.33333%
+    .section_titre p {
+        margin-bottom: .5rem !important
     }
 
-    .medium-up-4>.cell {
-        width: 25%
+    .entry__content article p {
+        font-size: 1.25rem
     }
 
-    .medium-up-5>.cell {
-        width: 20%
+    .hero__title {
+        padding-top: 2rem;
+        padding-bottom: 2rem
     }
 
-    .medium-up-6>.cell {
-        width: 16.66667%
+    .hero__usp li {
+        padding: 1rem .5rem 1rem 1rem;
+        font-size: 1rem
     }
 
-    .medium-up-7>.cell {
-        width: 14.28571%
+    .hero__usp li .icon {
+        width: 1.375rem;
+        height: 1.375rem
     }
 
-    .medium-up-8>.cell {
-        width: 12.5%
+    .home .site-footer {
+        margin-top: -7.5rem
+    }
+
+    h2 {
+        font-size: 2.75rem;
+        line-height: 1;
+        letter-spacing: -1px
+    }
+
+    .site-footer__inner {
+        background: var(--header-color);
+        padding: 3rem
     }
 }
 
 @media print,
-screen and (min-width:64em) {
-    .large-up-1>.cell {
-        width: 100%
-    }
+screen and (min-width:40em) {
 
-    .large-up-2>.cell {
-        width: 50%
-    }
-
-    .large-up-3>.cell {
+    .medium-up-3>.cell {
         width: 33.33333%
     }
+}
 
-    .large-up-4>.cell {
-        width: 25%
+@media print,
+screen and (min-width:40em) {
+
+    .grid-margin-x.medium-up-3>.cell {
+        width: calc(33.33333% - 1.875rem)
     }
 
-    .large-up-5>.cell {
-        width: 20%
-    }
-
-    .large-up-6>.cell {
-        width: 16.66667%
-    }
-
-    .large-up-7>.cell {
-        width: 14.28571%
-    }
-
-    .large-up-8>.cell {
-        width: 12.5%
+    .grid-margin-y>.medium-6 {
+        height: calc(50% - 1.875rem)
     }
 }
 
-.grid-margin-x.small-up-1>.cell {
-    width: calc(100% - 1.875rem)
+@media print,
+screen and (min-width:40em) {
+
+    .grid-x>.medium-6 {
+        flex-basis: auto
+    }
+
+    .grid-x>.medium-6 {
+        flex: 0 0 auto
+    }
+
+    .grid-x>.medium-6 {
+        width: 50%
+    }
 }
 
-.grid-margin-x.small-up-2>.cell {
-    width: calc(50% - 1.875rem)
-}
+@media print,
+screen and (min-width:40em) {
 
-.grid-margin-x.small-up-3>.cell {
-    width: calc(33.33333% - 1.875rem)
-}
-
-.grid-margin-x.small-up-4>.cell {
-    width: calc(25% - 1.875rem)
-}
-
-.grid-margin-x.small-up-5>.cell {
-    width: calc(20% - 1.875rem)
-}
-
-.grid-margin-x.small-up-6>.cell {
-    width: calc(16.66667% - 1.875rem)
-}
-
-.grid-margin-x.small-up-7>.cell {
-    width: calc(14.28571% - 1.875rem)
-}
-
-.grid-margin-x.small-up-8>.cell {
-    width: calc(12.5% - 1.875rem)
+    h1 {
+        font-size: 3.25rem;
+        line-height: 1.19231;
+        letter-spacing: -1.5px
+    }
 }
 
 @media print,
@@ -1682,98 +1287,218 @@ screen and (min-width:40em) {
     }
 }
 
+/* min-width:64em */
 @media print,
 screen and (min-width:64em) {
-    .grid-margin-x.large-up-1>.cell {
-        width: calc(100% - 1.875rem)
+    h1 {
+        font-size: 3.625rem;
+        line-height: 1.17241;
+        letter-spacing: -1.5px
     }
 
-    .grid-margin-x.large-up-2>.cell {
-        width: calc(50% - 1.875rem)
-    }
-
-    .grid-margin-x.large-up-3>.cell {
-        width: calc(33.33333% - 1.875rem)
-    }
-
-    .grid-margin-x.large-up-4>.cell {
-        width: calc(25% - 1.875rem)
-    }
-
-    .grid-margin-x.large-up-5>.cell {
-        width: calc(20% - 1.875rem)
-    }
-
-    .grid-margin-x.large-up-6>.cell {
-        width: calc(16.66667% - 1.875rem)
-    }
-
-    .grid-margin-x.large-up-7>.cell {
-        width: calc(14.28571% - 1.875rem)
-    }
-
-    .grid-margin-x.large-up-8>.cell {
-        width: calc(12.5% - 1.875rem)
-    }
-}
-
-.small-margin-collapse,
-.small-margin-collapse>.cell {
-    margin-right: 0;
-    margin-left: 0
-}
-
-.small-padding-collapse>.cell {
-    padding-right: 0;
-    padding-left: 0
-}
-
-@media print,
-screen and (min-width:40em) {
-
-    .medium-margin-collapse,
-    .medium-margin-collapse>.cell {
-        margin-right: 0;
-        margin-left: 0
-    }
-}
-
-@media print,
-screen and (min-width:40em) {
-    .medium-padding-collapse {
-        margin-right: 0;
-        margin-left: 0
-    }
-
-    .medium-padding-collapse>.cell {
-        padding-right: 0;
-        padding-left: 0
+    .hero__title {
+        padding-top: 5rem;
+        padding-bottom: 5rem
     }
 }
 
 @media print,
 screen and (min-width:64em) {
 
-    .large-margin-collapse,
-    .large-margin-collapse>.cell {
-        margin-right: 0;
-        margin-left: 0
+    .grid-margin-y>.large-3 {
+        height: calc(25% - 1.875rem)
+    }
+
+    .grid-x>.large-3 {
+        flex: 0 0 auto
+    }
+
+    .grid-x>.large-3 {
+        width: 25%
+    }
+
+    .grid-x>.large-3 {
+        flex-basis: auto
     }
 }
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:100em) {
+    .home .site-footer {
+        margin-top: -10rem
+    }
+}
+
+
 
 @media print,
-screen and (min-width:64em) {
-    .large-padding-collapse {
-        margin-right: 0;
-        margin-left: 0
-    }
-
-    .large-padding-collapse>.cell {
-        padding-right: 0;
-        padding-left: 0
+screen and (max-width:39.99875em) {
+    .site-footer__inner {
+        text-align: center
     }
 }
 
+.site-footer__title {
+    color: #fff;
+    margin-bottom: .5rem;
+    margin-top: .25rem
+}
+
+.site-footer__logo {
+    margin-bottom: .5rem
+}
+
+
+
+
+
+
+
+@media print {
+
+    *,
+    :after,
+    :before {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")"
+    }
+
+    img {
+        page-break-inside: avoid
+    }
+
+    img {
+        max-width: 100% !important
+    }
+
+    h2,
+    p {
+        orphans: 3;
+        widows: 3
+    }
+
+    h2 {
+        page-break-after: avoid
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (min-width:922px) {
+    .bouton_permutation {
+        margin: 1.8rem 0 0
+    }
+
+    .div_from .label {
+        flex-grow: 1
+    }
+
+    .div_from .div_option {
+        flex-wrap: nowrap
+    }
+
+    .div_from .form_reservation {
+        padding: 30px 32px 60px
+    }
+
+    /* ajouter */
+    .div_from .form_reservation .taxi2airport__locations,
+    .div_from .form_reservation .div_contact {
+        flex-wrap: nowrap
+    }
+
+    .div_from .form_reservation .div_lieu .label,
+    .div_from .form_reservation .div_contact .label {
+        width: 45%
+    }
+
+    .div_from .form_reservation .div_lieu .input_adresse,
+    .div_from .form_reservation .div_contact .input_contact {
+        white-space: nowrap
+    }
+
+    .div_from .form_reservation .div_date_heure .sous_div {
+        width: 270px
+    }
+
+    .div_from .form_reservation .div_groupe {
+        flex-wrap: nowrap;
+        flex-grow: 0
+    }
+
+    .div_from .form_reservation .taxi2airport__submitButton {
+        margin-top: 0;
+        width: auto;
+        flex-shrink: 0;
+        padding-left: 45px;
+        padding-right: 45px
+    }
+
+    .div_from .taxi2airport__locations,
+    .div_from .div_contact {
+        flex-wrap: nowrap
+    }
+    
+}
+
+
+@media screen and (max-width: 767px) {
+    /* #contact-form .div_contact {
+        display: none;
+    }
+    */
+}
+
+@media screen and (min-width: 767px) {
+    #contact-form .bouton_mobile {
+        display: none;
+    }
+    #contact-form .text_form {
+        display: none;
+    }
+  
+   
+  
+}
+
+/* fin media */
+
+
+#contact-form .text_form {
+    color: var(--gray-200);
+    background-color: transparent;
+     
+   
+    font-weight: 700;
+}
+
+
+.site-footer__inner {
+    background: var(--header-color);
+    padding: 1.5rem
+}
 
 .grid-y>.cell {
     height: auto;
@@ -1824,19 +1549,3 @@ screen and (min-width:64em) {
     display: flex;
     flex-direction: column;
 }
-
-
-/* ajouter */
-@media screen and (min-width: 64em) {
-
-    /* Modifier le comportement de la classe .is-layout-flex pour les appareils avec une largeur d'écran plus grande */
-    /* .is-layout-flex {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        justify-content: space-between;
-    } */
-}
-
-
-

@@ -10,23 +10,29 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <!-- This site is optimized with the Yoast SEO plugin v22.6 - https://yoast.com/wordpress/plugins/seo/ -->
     <title>Réserver un chauffeur VTC ou Taxi à Besançon</title>
-    <meta name="description" content="Chauffeur VTC disponible 24/7, Offrant des services de taxi - VTC - Uber. Confort, fiabilité et flexibilité pour tous vos déplacements. Réservez dès maintenant !">
-    <meta name="keywords" content="services de taxi, taxi Besançon,taxi gare Besançon, chauffeur vtc, chauffeur uber, chauffeur privé, services de taxi">
-  
+    <meta name="description"
+        content="Chauffeur VTC disponible 24/7, Offrant des services de taxi - VTC - Uber. Confort, fiabilité et flexibilité pour tous vos déplacements. Réservez dès maintenant !">
+    <meta name="keywords"
+        content="services de taxi, taxi Besançon,taxi gare Besançon, chauffeur vtc, chauffeur uber, chauffeur privé, services de taxi">
+
     <script src="https://kit.fontawesome.com/d7a21fe5b8.js" crossorigin="anonymous"></script>
 
 
-   <!-- notice -->
+    <!-- notice -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Inter:wght@900&display=swap" rel="stylesheet">
-   
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Inter:wght@900&display=swap"
+        rel="stylesheet">
+
 
 </head>
 
 <body class="home">
 
     <header>
+
+
 
     </header>
 
@@ -42,124 +48,215 @@
             </div>
 
             <div class="hero__content">
-                <div id="taxi2airport_app">
 
 
-                    <div class="taxi2airport">
-                        <form id="contact-form" onsubmit="SendEmail(); return false;"
-                            class="reservationForm taxi2airport__form">
-                            <div class="taxi2airport__locations">
-                                <div for="input_from" class="label"><span class="label__title">De</span>
-                                    <div class="form__inputContainer">
-                                        <input class="taxi2airport__locations__input inputLogo empty" type="text"
-                                            id="departureAddress" name="departureAddress"
-                                            placeholder="Aéroport, adresse, gare, port" autocomplete="off" required>
-                                        <div class="taxi2airport__select">
-                                            <div id="departureSuggestions" class="taxi2airport__select__wrapper">
-                                            </div>
+
+                <div class="div_from">
+                    <form id="contact-form" class="form_reservation" onsubmit="SendEmail(); return false;">
+                        <div class="div_lieu">
+
+                            <div class="label"><span class="label__title">De</span>
+                                <div class="form__inputContainer">
+                                    <input class="input_adresse input_logo" type="text" id="departureAddress"
+                                        name="departureAddress" placeholder="Aéroport, adresse, gare, port"
+                                        autocomplete="off" required>
+                                    <div class="div_select">
+                                        <div id="departureSuggestions" class="div_select_wrapper">
                                         </div>
                                     </div>
                                 </div>
-                                <button type="button" class="taxi2airport__switcher__button" id="switchButton"><span
-                                        class="sr-only">Switch to
-                                        and from location</span>
-                                    <i class="fa-solid fa-repeat" style="color: #5e6d7c;"></i>
+                            </div>
+                            <button type="button" class="bouton_permutation" id="switchButton"><span
+                                    class="sr-only">Inverser les adresses</span>
+                                <i class="fa-solid fa-repeat" style="color: #5e6d7c;"></i>
+                            </button>
+
+                            <div class="label"><span class="label__title">À</span>
+                                <div class="form__inputContainer">
+                                    <input class="input_adresse input_logo" type="text" id="arrivalAddress"
+                                        name="arrivalAddress" placeholder="Aéroport, adresse, gare, port"
+                                        autocomplete="off" required>
+
+                                    <div class="div_select">
+                                        <div id="arrivalSuggestions" class="div_select_wrapper">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div_option">
+                            <div class="div_groupe">
+                                <div class="label">
+                                    <div class="div_date_heure label">
+                                        <span class="label__title">Date et heure de prise en charge</span>
+                                        <div class="sous_div">
+
+                                            <label class="label">
+                                                <input class="text-center" type="date" id="date" name="naissance"
+                                                    value="2024-01-01" required>
+                                            </label>
+
+                                            <div class="taxi2airport__dateTime__divider">
+                                                <div class="taxi2airport__dateTime__line"></div>
+                                            </div>
+
+                                            <label class="label">
+                                                <input class="text-center" type="time" id="heure" name="heure" required>
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="div_groupe">
+                                <div class="label"><span class="label__title">Passagers</span>
+
+
+                                    <input type="number" id="Nbpassage"
+                                        class="input_style input_style_passenger text-center" value="1" placeholder="1"
+                                        max="20" min="0">
+
+
+                                </div>
+                                <div class="label"><span class="label__title">Bagage</span>
+                                    <input type="number" id="Nbbagage"
+                                        class="input_style input_style_bagage text-center" value="1" placeholder="1"
+                                        max="20" min="0">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="bouton_mobile">
+
+                            <div class="label"><span class="label__title" style="opacity: 0;">Recherche</span>
+                                <button class="bouton bouton_whatsapp" type="button"
+                                    onclick="verifyAndRedirect('whatsapp')">
+                                    <span>whatsapp</span>
+                                    <i class="fa-brands fa-whatsapp fa-lg"></i>
                                 </button>
-                                <div for="input_to" class="label"><span class="label__title">À</span>
-                                    <div class="form__inputContainer">
-
-                                        <input class="taxi2airport__locations__input inputLogo empty" type="text"
-                                            id="arrivalAddress" name="arrivalAddress"
-                                            placeholder="Aéroport, adresse, gare, port" autocomplete="off" required>
-
-                                        <div class="taxi2airport__select">
-                                            <div id="arrivalSuggestions" class="taxi2airport__select__wrapper">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="label"><span class="label__title" style="opacity: 0;">Recherche</span>
+                                <button class="bouton bouton_sms" type="button" onclick="verifyAndRedirect('sms')">
+                                    <span>SMS</span>
+                                    <i class="fa-solid fa-message"></i>
+                                </button>
                             </div>
 
-                            <div class="taxi2airport__settings">
-                                <div class="form__inputGroup">
-                                    <div class="label">
-                                        <div
-                                            class="taxi2airport__dateTime label taxi2airport__dateTime__timeInput--no-return">
-                                            <span class="label__title">Date et heure de prise en charge</span>
-                                            <div class="taxi2airport__dateTime__wrapper">
-                                                <label class="label">
-
-                                                    <input class="" type="date" id="date" name="naissance"
-                                                        value="2024-01-01" required>
-
-                                                </label>
-
-                                                <div class="taxi2airport__dateTime__divider">
-                                                    <div class="taxi2airport__dateTime__line"></div>
-                                                </div>
-
-                                                <label class="label">
-                                                    <input class="" type="time" id="heure" name="heure" required>
-
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="form__inputGroup">
-                                    <div class="label"><span class="label__title">Passagers</span>
-
-
-                                        <input type="number" id="Nbpassage"
-                                            class="taxi2airport__mutatorButton taxi2airport__mutatorButton--passenger"
-                                            placeholder="1" max="4" min="0">
-
-
-                                    </div>
-                                    <div class="label"><span class="label__title">Bagage</span>
-                                        <input type="number" id="Nbbagage"
-                                            class="taxi2airport__mutatorButton taxi2airport__mutatorButton--luggage taxi2airport__mutatorButton--closed"
-                                            placeholder="1" max="4" min="0">
-                                    </div>
-                                </div>
-
-                                <div class="label"><span class="label__title" style="opacity: 0;">Recherche</span>
-                                    <button class="taxi2airport__submitButton" type="submit" name="btnInscription">
-                                        <span>Recherche</span>
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </button>
-                                </div>
-
-                            </div>
-
-                            <div class="taxi2airport__contact">
-                                <div for="input_email" class="label"><span class="label__title">Votre
-                                        email</span>
-                                    <div class="form__inputContainer">
-
-                                        <input class="taxi2airport__contact__input inputLogo empty" type="email"
-                                            name="email" id="txtEmail" placeholder="example@gmail.com" required>
-                                    </div>
-                                </div>
-                                <div for="input_tel" class="label"><span class="label__title">Numéro
-                                        téléphone</span>
-                                    <div class="form__inputContainer">
-
-                                        <input class="taxi2airport__contact__input inputLogo empty" type="tel"
-                                            name="phoneNumber" id="phoneNumber" placeholder="0604445478" required>
-                                    </div>
-                                </div>
+                            <div class="text_form text-center" style="margin-top: 20px;">
+                                <span>Compatible uniquement sur mobile.</span>
                             </div>
 
 
+                            <div class="text_form text-center" style="margin-top: 60px;">
+                                <span>OU.</span>
+                            </div>
 
-                        </form>
-                    </div>
 
+                            <script>
+
+                                function verifyAndRedirect(buttonType) {
+                                    // Récupérer les valeurs des champs input
+                                    var departureAddress = document.getElementById('departureAddress').value.trim();
+                                    var arrivalAddress = document.getElementById('arrivalAddress').value.trim();
+                                    var date = document.getElementById('date').value.trim();
+                                    var heure = document.getElementById('heure').value.trim();
+                                    var Nbpassage = document.getElementById('Nbpassage').value.trim();
+                                    var Nbbagage = document.getElementById('Nbbagage').value.trim();
+
+                                    // Vérifier si tous les champs sont remplis
+                                    if (departureAddress === '' || arrivalAddress === '' || date === '' || heure === '' || Nbpassage === '' || Nbbagage === '') {
+                                        alert('Veuillez remplir tous les champs ci-dessus.');
+                                        return; // Arrête la fonction sans effectuer de redirection
+                                    }
+
+                                    var message =
+
+                                        "DEMANDE DE RÉSERVATION%0A%0A" +
+
+                                        "De: " + departureAddress + "%0A" +
+                                        "À: " + arrivalAddress + "%0A%0A" +
+
+                                        "Date: " + date + "%0A" +
+                                        "Heure: " + heure + "%0A%0A" +
+
+                                        "Passagers: " + Nbpassage + "%0A" +
+                                        "Bagages: " + Nbbagage;
+
+                                    // Redirection en fonction du type de bouton
+                                    if (buttonType === 'whatsapp') {
+
+                                        // Rediriger vers WhatsApp
+                                        window.location.href = "https://wa.me/+33781180897/?text=" + message;
+
+
+
+                                    } else if (buttonType === 'sms') {
+                                        window.location.href = "sms:+33781180897?&body=" + message;
+                                    }
+                                }
+
+
+                            </script>
+
+                            <div class="text_form text-center" style="margin-top: 60px;">
+                                <span>Je ne souhaite pas utiliser WhatsApp/SMS.<br><br>Veuillez donc remplir les champs
+                                    ci-dessous.</span>
+                            </div>
+
+                        </div>
+
+
+
+                            
+
+
+
+
+                        <div id="div_contact" class="div_contact">
+                            <div for="input_email" class="label"><span class="label__title">Votre
+                                    email</span>
+                                <div class="form__inputContainer">
+
+                                    <input class="input_contact input_logo" type="email" name="email" id="txtEmail"
+                                        placeholder="example@gmail.com" required>
+                                </div>
+                            </div>
+
+
+                            <div for="input_tel" class="label"><span class="label__title">Numéro
+                                    téléphone</span>
+                                <div class="form__inputContainer">
+
+                                    <input class="input_contact input_logo" type="tel" name="phoneNumber"
+                                        id="phoneNumber" placeholder="0604445478" required>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="label"><span class="label__title" style="opacity: 0;">Recherche</span>
+                            <button class="bouton bouton_recherche" type="submit" name="btnInscription">
+                                <span>Recherche</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+
+
+
+
+
+                    </form>
                 </div>
+
+
 
                 <!-- <ul class="hero__usp">
                     <li><svg class="icon icon--icon-check" aria-hidden="true">
@@ -182,100 +279,72 @@
             </div>
         </div>
 
-        <article class="page">
-
-            <div class="entry__content">
-
-                <div class="vo-block-vo-heading text-center">
-                    <div class="vo-block-vo-heading__inner">
-                        <h2 class='vo-block-vo-heading__title'>Réservez facilement votre transfert</h2>
-                        <p style="color:#ffbc2b;" class="vo-block-vo-heading__above-text">
-                            <strong>Nos avantages clés</strong>
-                        </p>
-                    </div>
-                </div>
 
 
+        <!-- avantage -->
+        <div class="entry__content">
 
-                <div class="alignwide layout-flex">
+            <div class="section_titre text-center">
 
-                    <div class="">
-                        <div class="vo-block-icon-text vo-block-icon-text--vertical">
-                            <div class="vo-block-icon-text__inner">
-                                <div class="vo-block-icon-text__icon">
-                                    <i class="fa-solid fa-handshake fa-xs"></i>
-                                </div>
-                                <div class="vo-block-icon-text__content">
-                                    <h4 class='vo-block-icon-text__title'>La simplicité de notre service</h4>
-                                    <p class="vo-block-icon-text__description">Une approche client facilitée pour un
-                                        voyage sans soucis.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="">
-                        <div class="vo-block-icon-text vo-block-icon-text--vertical">
-                            <div class="vo-block-icon-text__inner">
-                                <div class="vo-block-icon-text__icon">
-                                    <i class="fa-solid fa-car fa-xs"></i>
-                                </div>
-                                <div class="vo-block-icon-text__content">
-                                    <h4 class='vo-block-icon-text__title'>Des voitures hybrides</h4>
-                                    <p class="vo-block-icon-text__description">Opter pour une voiture hybride est un
-                                        geste éco-responsable qui contribue à la réduction des émissions de CO2.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="">
-                        <div class="vo-block-icon-text vo-block-icon-text--vertical">
-                            <div class="vo-block-icon-text__inner">
-                                <div class="vo-block-icon-text__icon">
-                                    <i class="fa-solid fa-cart-plus fa-xs"></i>
-                                </div>
-                                <div class="vo-block-icon-text__content">
-                                    <h4 class='vo-block-icon-text__title'>Possibilité de réservation</h4>
-                                    <p class="vo-block-icon-text__description">Réservez un chauffeur à l'avance ou en
-                                        immédiat pour vous ou vos proches.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="">
-                        <div class="vo-block-icon-text vo-block-icon-text--vertical">
-                            <div class="vo-block-icon-text__inner">
-                                <div class="vo-block-icon-text__icon">
-                                    <i class="fa-solid fa-money-bill fa-xs"></i>
-                                </div>
-                                <div class="vo-block-icon-text__content">
-                                    <h4 class='vo-block-icon-text__title'>Le prix est fixé à l'avance</h4>
-                                    <p class="vo-block-icon-text__description">Le prix de la course est fixé à l'avance,
-                                        garantissant une transparence totale et l'absence de surprises à la fin du
-                                        trajet.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-                <div class="">
-                    
-                </div>
-
+                <h2>Réservez facilement votre transfert</h2>
+                <p style="color:#ffbc2b;">
+                    <strong>Nos avantages clés</strong>
+                </p>
 
             </div>
+            <article>
+                <div>
+                    <div class="div_icon">
+                        <i class="fa-solid fa-handshake fa-xs"></i>
+                    </div>
 
-        </article>
+                    <h4>La simplicité de notre service</h4>
+                    <p>Une approche client facilitée pour un voyage sans soucis.</p>
+
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <div class="div_icon">
+                        <i class="fa-solid fa-car fa-xs"></i>
+                    </div>
+
+                    <h4>Des voitures hybrides</h4>
+                    <p>Opter pour une voiture hybride est un geste éco-responsable qui contribue à la réduction des
+                        émissions de CO2.</p>
+
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <div class="div_icon">
+                        <i class="fa-solid fa-cart-plus fa-xs"></i>
+                    </div>
+
+                    <h4>Possibilité de réservation</h4>
+                    <p>Réservez un chauffeur à l'avance ou en immédiat pour vous ou vos proches.</p>
+
+                </div>
+            </article>
+
+            <article>
+                <div>
+                    <div class="div_icon">
+                        <i class="fa-solid fa-money-bill fa-xs"></i>
+                    </div>
+
+                    <h4>Le prix est fixé à l'avance</h4>
+                    <p>Le prix de la course est fixé à l'avance, garantissant une transparence totale et l'absence de
+                        surprises à la fin du trajet.</p>
+
+                </div>
+            </article>
+
+        </div>
+
+
 
 
 
@@ -285,14 +354,14 @@
 
 
         <!-- Les destinations plus populaires besançon -->
-        <div class="site-footer__transfers">
-            <div class="site-footer__transfers-content">
-                <div class="vo-block-vo-heading text-center">
-                    <div class="vo-block-vo-heading__inner">
-                        <h2 class="vo-block-vo-heading__title">Destinations populaires à Besançon.</h2>
-                        <p style="color:#ffbc2b;" class="vo-block-vo-heading__above-text">
-                            Quelle sera votre prochaine aventure à Besançon ?</p>
-                    </div>
+        <div class="section_grey">
+            <div class="section_grey_contenu">
+                <div class="section_titre text-center">
+
+                    <h2>Destinations populaires à Besançon.</h2>
+                    <p style="color:#ffbc2b;">
+                        Quelle sera votre prochaine aventure à Besançon ?</p>
+
                 </div>
 
                 <div class="grid-x grid-margin-x grid-margin-y medium-up-3 hide-for-small-only">
@@ -387,15 +456,15 @@
             </div>
         </div>
 
-    
+
         <!-- Gare populaire   -->
         <div id="Gare" class="entry__content">
-            <div class="vo-block-vo-heading text-center">
-                <div class="vo-block-vo-heading__inner">
-                    <h2 class="vo-block-vo-heading__title">Gare populaire à Besançon.</h2>
-                    <p class="vo-block-vo-heading__above-text">Quelle sera votre prochaine gare de départ ou d'arrivée à
-                        Besançon ?</p>
-                </div>
+            <div class="section_titre text-center">
+
+                <h2>Gare populaire à Besançon.</h2>
+                <p>Quelle sera votre prochaine gare de départ ou d'arrivée à
+                    Besançon ?</p>
+
             </div>
             <div class="grid-x grid-margin-x grid-margin-y medium-up-3 alignfullwide">
 
@@ -416,7 +485,7 @@
                 </div>
                 <div class="cell airport-item">
                     <a href="" class="airport-item__anchor">
-                        <span class="sr-only">Gare de Besançon-Viottes</span>
+                        <span class="sr-only">Gare de Besançon-Viotte</span>
                     </a>
                     <div class="airport-item__image">
                         <img src="images/gare-viotte.png" alt="gare viotte">
@@ -424,7 +493,7 @@
                     <div class="airport-item__ribbon">Plus populaires </div>
                     <div class="airport-item__title">
                         <span>Réserver un VTC</span>
-                        <h4>Gare de Besançon-Viottes</h4>
+                        <h4>Gare de Besançon-Viotte</h4>
                     </div>
                 </div>
 
@@ -435,12 +504,12 @@
 
 
             <!-- Aéroport à proximité   -->
-            <div id="Aéroports" class="vo-block-vo-heading text-center">
-                <div class="vo-block-vo-heading__inner">
-                    <h2 class="vo-block-vo-heading__title">Aéroport à proximité de Besançon.</h2>
-                    <p class="vo-block-vo-heading__above-text">Quelle sera votre prochaine Aéroport de départ ou
-                        d'arrivée à Besançon ?</p>
-                </div>
+            <div id="Aéroports" class="section_titre text-center">
+
+                <h2>Aéroport à proximité de Besançon.</h2>
+                <p>Quelle sera votre prochaine Aéroport de départ ou
+                    d'arrivée à Besançon ?</p>
+
             </div>
             <div class="grid-x grid-margin-x grid-margin-y medium-up-4 alignfullwide">
 
@@ -519,16 +588,8 @@
                             alt="logo chauffeur vtc besancon" class="site-footer__logo"> -->
                         <h6 class="site-footer__title">CHAUFFEUR-VTC-BESANCON.FR</h6>
                         <ul id="footer-menu-1" class="footer-menu">
-                            <li><a id="serviceClientLink" target="_blank" rel="noopener"
-                                    href="mailto:contact@chauffeur-vtc-besancon.fr">Service client</a></li>
-                            <script>
-                                document.getElementById('serviceClientLink').onclick = function (event) {
-                                    event.preventDefault(); // Empêche le comportement par défaut du lien
-                                    alert('Merci de contacter notre service client\ncontact@chauffeur-vtc-besancon.fr'); // Affiche un message avec un saut de ligne
-                                    window.location.href = 'mailto:contact@chauffeur-vtc-besancon.fr'; // Ouvre le client de messagerie
-                                };
-                            </script>
-
+                            <li><a href="mailto:contact@chauffeur-vtc-besancon.fr?subject=SERVICE%20CLIENT">Service
+                                    client</a></li>
 
                             <!-- <li><a target="_blank" rel="noopener" href="#">A propos de nous</a></li>
                             <li><a target="_blank" href="#">Blog</a></li> -->
@@ -536,17 +597,15 @@
                         </ul>
                     </div>
 
-
-
-                    <!-- <div class="cell large-3 medium-6 small-12">
+                    <div class="cell large-3 medium-6 small-12">
                         <h6 class="site-footer__title">Travailler avec nous</h6>
                         <ul id="footer-menu-1" class="footer-menu">
-                            <li><a target="_blank" rel="noopener" href="#">Emplois</a></li>
-                            <li><a target="_blank" rel="noopener" href="#">Devenez un chauffeur Taxi2Airport</a></li>
-                            <li><a target="_blank" href="#">Se connecter en tant que
-                                    partenaire</a></li>
+                            <li><a href="mailto:contact@chauffeur-vtc-besancon.fr?subject=EMPLOIS">Emplois</a></li>
+                            <li><a
+                                    href="mailto:contact@chauffeur-vtc-besancon.fr?subject=DEVENIR%20UN%20CHAUFFEUR%20PARTENAIRE">Devenez
+                                    chauffeur partenaire</a></li>
                         </ul>
-                    </div> -->
+                    </div>
 
                     <!-- <div class="cell large-3 medium-6 small-12">
                         <h6 class="site-footer__title">Légal</h6>
@@ -560,8 +619,8 @@
                     <div class="cell large-3 medium-6 small-12">
                         <h6 class="site-footer__title">Gares populaires</h6>
                         <ul id="footer-menu-1" class="footer-menu">
-                            <li><a rel="noopener" href="#Gare">Gare Besançon Franche-Comté TGV</a></li>
-                            <li><a rel="noopener" href="#Gare">Gare de Besançon-Viottes</a></li>
+                            <li><a href="#Gare">Gare Besançon Franche-Comté TGV</a></li>
+                            <li><a href="#Gare">Gare de Besançon-Viottes</a></li>
                         </ul>
                     </div>
 
@@ -722,6 +781,22 @@
                 arrivalSuggestionsList.style.display = 'none';
             }
         });
+
+
+        // Ajouter un écouteur d'événement de clic sur le document
+        document.addEventListener('click', function (event) {
+            const isClickInsideDeparture = departureAddressInput.contains(event.target) || departureSuggestionsList.contains(event.target);
+            const isClickInsideArrival = arrivalAddressInput.contains(event.target) || arrivalSuggestionsList.contains(event.target);
+
+            if (!isClickInsideDeparture) {
+                departureSuggestionsList.style.display = 'none';
+            }
+            if (!isClickInsideArrival) {
+                arrivalSuggestionsList.style.display = 'none';
+            }
+        });
+
+
     });
 </script>
 
