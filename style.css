@@ -1465,11 +1465,12 @@ screen and (max-width:39.99875em) {
 
 
 @media screen and (max-width: 767px) {
-    /* #contact-form .div_contact {
+    /* .hidden {
         display: none;
-    }
-    */
+    } */
 }
+
+
 
 @media screen and (min-width: 767px) {
     #contact-form .bouton_mobile {
@@ -1549,3 +1550,7 @@ screen and (max-width:39.99875em) {
     display: flex;
     flex-direction: column;
 }
+
+
+    
+   
